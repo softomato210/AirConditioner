@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AirConditioner</string>
+
+    <string name="title">環境機器管理表</string>
+
+    <string name="title_registration">登録一覧</string>
+
+    <string name="manager_code">担当者コード</string>
+    <string name="manager">担当者</string>
+    <string name="date">実施日</string>
+    <string name="temperature">室内温度</string>
+    <string name="aircon_clean">エアコン掃除</string>
+    <string name="fan_clean">換気扇掃除</string>
+    <string name="illumination_clean">照明機器点検</string>
+
+
+    <string name="navi_failure_acquisition">データの取得に失敗しました</string>
+
+    <string name="navi_save_success">登録しました</string>
+    <string name="navi_save_failed">点検事項に漏れがあります</string>
+
+    <string name="btn_save">保存</string>
+
+    <string name="menu_input">入力画面</string>
+    <string name="menu_registration">登録一覧</string>
+
+    <string name="guidance_choice">選択してください</string>
+</resources>
