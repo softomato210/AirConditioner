@@ -4,16 +4,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,6 +21,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.DisplayMode
@@ -46,15 +43,12 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import com.example.airconditioner.database.AirConditioner
-import com.websarva.wings.android.rental.R
+import com.example.airconditioner.ui.theme.onSurfaceVariantLightMediumContrast
+import com.example.airconditioner.ui.theme.outlineLightMediumContrast
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
-
-
-
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -248,8 +242,7 @@ fun CheckboxRow(label: String,
         )
         Checkbox(
             checked = isChecked,
-            modifier = Modifier
-                .padding(end = 80.dp),
+            modifier = Modifier.padding(end = 80.dp),
             onCheckedChange =  onCheckedChange,
             colors = CheckboxDefaults.colors(
                 checkedColor = MaterialTheme.colorScheme.onTertiaryContainer,
@@ -274,9 +267,9 @@ fun AirConditionerItem(
     }
 
     val textColor = when(airConditioner.outputFlg) {
-        0 -> Color.Black
-        1 -> Color.Black
-        2 -> Color.Black
+        0 -> onSurfaceVariantLightMediumContrast
+        1 -> onSurfaceVariantLightMediumContrast
+        2 -> onSurfaceVariantLightMediumContrast
         else -> Color.Black
     }
 

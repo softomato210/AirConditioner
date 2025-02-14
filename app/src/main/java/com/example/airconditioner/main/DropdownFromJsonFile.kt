@@ -13,6 +13,7 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -26,7 +27,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.airconditioner.AirConditionerViewModel
-import com.websarva.wings.android.rental.R
+import com.websarva.wings.android.airconditioner.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -66,23 +67,27 @@ fun DropdownFromJsonFile(
                 modifier = Modifier
                     .menuAnchor()
                     .fillMaxWidth()
-                    .clickable { expanded = true },
-                trailingIcon = {
-                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
-                },
+                    .clickable { expanded = true }
+                    .background(Color.Transparent),
+                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+
             )
 
             ExposedDropdownMenu(
                 expanded = expanded,
-                onDismissRequest = { expanded = false }
+                onDismissRequest = { expanded = false },
+                modifier = Modifier
+                    .background(Color.Transparent)
+                //isee事件
             ) {
                 filteredItems.forEach { item ->
                     DropdownMenuItem(
                         text = { Text(item.name) },
                         onClick = {
                             onItemSelected(item.name)
-                            expanded = false
-                        }
+                            expanded = false },
+                        modifier = Modifier
+                            .background(Color.Transparent)
                     )
                 }
             }

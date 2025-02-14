@@ -12,7 +12,7 @@ import com.example.airconditioner.database.DatabaseProvider
 import com.example.airconditioner.ftp.FtpDownloader
 import com.example.airconditioner.input.Manager
 import com.google.gson.Gson
-import com.websarva.wings.android.rental.BuildConfig
+import com.websarva.wings.android.airconditioner.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

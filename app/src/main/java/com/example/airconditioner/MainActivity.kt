@@ -52,7 +52,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.airconditioner.database.AirConditioner
 import com.example.airconditioner.main.*
 import com.example.airconditioner.ui.theme.AirConditionerTheme
-import com.websarva.wings.android.rental.R
+import com.websarva.wings.android.airconditioner.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -265,7 +265,7 @@ fun HomeScreen(
                 .constrainAs(btnSave) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
-                    bottom.linkTo(parent.bottom, margin = 16.dp)
+                    bottom.linkTo(parent.bottom, margin = 5.dp)
                 }
                 .fillMaxWidth()
                 .padding(start = 10.dp,end = 80.dp),

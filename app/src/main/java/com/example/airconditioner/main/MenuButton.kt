@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.airconditioner.Screens
-import com.websarva.wings.android.rental.R
+import com.websarva.wings.android.airconditioner.R
 
 @Composable
 fun MenuButton(navController: NavController,
